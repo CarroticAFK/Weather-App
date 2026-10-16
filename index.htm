@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.umd.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="father">
+            <div class="search-bar">
+                <input type="text" placeholder="Enter city name">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <div class="main-container confidenciality">
+                <div class="top-box">
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h2>Dhaka, Bangladesh</h2>
+                    </div>
+                    <div class="summary">
+                        <p>Light rain</p>
+                        <p id="date">Date</p>
+                        <p id="sunrise">Sunrise H:MM AM</p>
+                        <p id="sunset">Sunset H:MM PM</p>
+                    </div>
+                </div>
+                <div class="report">
+                    <div class="temp-graphnt">
+                        <div class="temp-report">
+                            <div class="temp-report-col1">
+                                <img class="right-now-image" src="assets/weather/50.svg" alt="">
+                            </div>
+                            <div class="temp-report-col2">
+                                <div class="temp-report-col2-row1">
+                                    <h2 class="conversion">50</h2>
+                                    <button>°F</button>
+                                </div>
+                                <div class="temp-report-col2-row2">
+                                    <p id="high" class="conversion">High 100</p>
+                                    <p id="low" class="conversion">Low 100</p>
+                                </div>
+                                <div class="temp-report-col2-row3">
+                                    <p class="conversion">Feels like</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-report">
+                            <p id="Humidity">Humidity 50%</p>
+                            <p id="Pop">Precipitation 50%</p>
+                            <p id="Wind">Wind 11.12KpH</p>
+                        </div>
+                    </div>
+                    <div class="graph-container">
+                        <canvas id="graph"></canvas>
+                    </div>
+                </div>
+                <div class="next-week-forecast">
+                    <div class="next-week-forecast-items today">
+                        <h3>day</h3>
+                        <img src="assets/weather/50.svg" alt="">
+                        <p class="conversion">3</p>
+                        <p class="conversion">4</p>
+                    </div>
+                    <div class="next-week-forecast-items">
+                        <h3>day</h3>
+                        <img src="assets/weather/50.svg" alt="">
+                        <p class="conversion">3</p>
+                        <p class="conversion">4</p>
+                    </div>
+                    <div class="next-week-forecast-items">
+                        <h3>day</h3>
+                        <img src="assets/weather/50.svg" alt="">
+                        <p class="conversion">3</p>
+                        <p class="conversion">4</p>
+                    </div>
+                    <div class="next-week-forecast-items">
+                        <h3>day</h3>
+                        <img src="assets/weather/50.svg" alt="">
+                        <p class="conversion">3</p>
+                        <p class="conversion">4</p>
+                    </div>
+                    <div class="next-week-forecast-items">
+                        <h3>day</h3>
+                        <img src="assets/weather/50.svg" alt="">
+                        <p class="conversion">3</p>
+                        <p class="conversion">4</p>
+                    </div>
+                    <div class="next-week-forecast-items">
+                        <h3>day</h3>
+                        <img src="assets/weather/50.svg" alt="">
+                        <p>300°</p>
+                        <p>300°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="start">
+                <img src="search-city.png" alt="">
+                <div class="start-message">
+                    <h2>Search here</h2>
+                    <p>Find out the weather condition of any place</p>
+                </div>
+            </div>
+            <div class="foundnt confidenciality">
+                <img src="not-found.png" alt="">
+                <h2>The place you are trying to search does NOT exist</h2>
+            </div> 
+        </div>
+        <script src="script.js"></script>
+        <script src="codes.js"></script>
+    </body>
+</html>
